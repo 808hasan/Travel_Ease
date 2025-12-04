@@ -110,6 +110,7 @@
     })
   </script>
 
+  <!-- the dropdown list to select adults and children contains all place holders -->
   <section class="book">
     <div class="container flex_space">
       <div class="text">
@@ -119,8 +120,30 @@
         <form class="grid">
           <input type="date" placeholder="Araival Date">
           <input type="date" placeholder="Departure Date">
-          <input type="number" placeholder="Adults">
-          <input type="number" placeholder="Childern">
+          <select placeholder="Adults">
+            <option value="">Select Adults</option>
+            <option value="1">1 Adult</option>
+            <option value="2">2 Adults</option>
+            <option value="3">3 Adults</option>
+            <option value="4">4 Adults</option>
+            <option value="5">5 Adults</option>
+          </select>
+          <select placeholder="Children">
+            <option value="">Select Children</option>
+            <option value="0">0 Children</option>
+            <option value="1">1 Child</option>
+            <option value="2">2 Children</option>
+            <option value="3">3 Children</option>
+            <option value="4">4 Children</option>
+            <option value="5">5 Children</option>
+          </select>
+          <select id="countrySelect">
+            <option value="">Select Country</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="New York">New York</option>
+            <option value="Paris">Paris</option>
+          </select>
           <input type="submit" value="CHECK AVAILABILITY">
         </form>
       </div>
@@ -183,6 +206,20 @@
   <div class="legal">
     <p class="container">Copyright (c) 2025 Copyright Holder All Rights Reserved.</p>
   </div>
+
+  <script>
+    <!-- the dropdown list to select countries -->
+    const countrySelect = document.getElementById('countrySelect');
+    const countries = ['Dubai', 'Tokyo', 'New York', 'Paris'];
+
+    countrySelect.innerHTML = '<option value="">Select Country</option>';
+    countries.forEach(country => {
+      const option = document.createElement('option');
+      option.value = country;
+      option.textContent = country;
+      countrySelect.appendChild(option);
+    });
+  </script>
 
 </body>
 </html>

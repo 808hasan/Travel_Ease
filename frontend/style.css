@@ -221,7 +221,17 @@ h1 {
   padding: 20px;
 }
 
+.book select {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
 .book input:nth-last-child(1) {
+  background: #ff523b;
+  color: #fff;
+}
+
+.book select:nth-last-child(1) {
   background: #ff523b;
   color: #fff;
 }
